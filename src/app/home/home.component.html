@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="firstline">From Metrics To Alert</h1>
+    <h3 class="secondline">We look after your system</h3>
+</div>
+
+<mat-grid-list class="metrics" [cols]="breakpoint" (window:resize)="onResize($event)">
+    <mat-grid-tile><i class="fa fa-line-chart">
+    CPU usage</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-snowflake-o">
+    CPU temperature</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-area-chart">
+    CPU cores</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-tachometer">
+    Network Utilization</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-heartbeat">
+    Health</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-lightbulb-o">
+    Memory</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-pie-chart">
+    Disk Space</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-bar-chart">
+    No. of concurrent or processed threads</i></mat-grid-tile>
+    <mat-grid-tile><i class="fa fa-calculator">
+    Count of requests</i></mat-grid-tile>
+</mat-grid-list>
+  

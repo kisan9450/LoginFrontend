@@ -1,0 +1,26 @@
+<mat-card class="application-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Name : {{application.applicationName}} {{errorMsg}}</mat-card-title>
+        <mat-card-subtitle>Address : {{application.address}} {{errorMsg}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+        <div class="buttons" fxLayout="column" fxLayoutGap="1%" FxLayoutWrap fxLayoutAlign="center">
+            <div>
+                <input [(ngModel)]="samplingPeriod" placeholder="Enter the duration for Sampling">
+                <button mat-raised-button (click)="sample(samplingPeriod)">Sample Metrics</button>
+            </div>
+            <div>{{over}}</div>
+            <p> {{application.userId}} i {{application.id}} </p>
+            <!-- <button mat-raised-button (click)="staticData()">View Previous Monitored Data</button>
+            <button mat-raised-button (click)="monitor()">Monitor Application</button> -->
+            <button mat-raised-button [routerLink]="['../','static',application.userId,application.id]">View Previous Monitored Data</button>
+            <button mat-raised-button [routerLink]="['../','display',application.userId,application.id]">Monitor Application</button>
+        </div>
+        <!-- <app-application-options (Event)="recieveEvent($event)" [item]="item">
+      </app-application-options> -->
+    </mat-card-actions>
+    <mat-card-content>
+        <p>{{response}}</p>
+    </mat-card-content>
+</mat-card>

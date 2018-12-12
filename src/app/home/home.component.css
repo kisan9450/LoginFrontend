@@ -1,0 +1,39 @@
+.metrics{
+    display: flex;
+    flex-flow: column;
+}
+mat-grid-tile{
+   color: black;
+}
+.container{
+        background-image:url('src/assets/img/homepage.jpg');
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        height: 35%;
+        margin-top: -1.8%;
+}
+
+.secondline{
+    padding-top: 3%;
+}
+
+.firstline{
+    padding-top: 3%;
+}
+
+@media only screen and (max-width: 700px) {
+.container{
+    margin-top: -10%;
+    font-size: 2.5vw;
+}
+}
+@media only screen and (max-width: 500px) {
+    .container {
+    font-size: 3vw;
+}
+}
+
+@media only screen and (max-width: 300px) {
+
+}

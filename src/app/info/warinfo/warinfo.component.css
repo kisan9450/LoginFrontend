@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+}
+.example-card{
+    max-width: 80vw;
+}
+.title{
+    display: flex;
+    text-align: center;
+}

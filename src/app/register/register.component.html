@@ -1,0 +1,35 @@
+<h2>
+  Register
+ </h2>
+<div class="container">
+ <form [formGroup]="registrationform" (ngSubmit)="onSubmit() && registrationform.valid" #f="ngForm" novalidate>
+   <div class="form-group">
+     <label for="name"><h4>Username</h4></label>
+     <input type="text" class="form-control" id="usernameid"
+     [(ngModel)]="user.userName" formControlName="usernameform" required />
+   </div>
+   <div class="form-group">
+     <label for="alterEgo"><h4>Email</h4></label>
+     <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="email" 
+     [(ngModel)]="user.email" formControlName="emailform" required />
+   </div>
+   
+   <div class="form-group">
+     <label for="alterEgo"><h4>Password</h4></label>
+     <input type="password" class="form-control" id="passwordid"
+     [(ngModel)]="user.password"
+     formControlName="passwordform" required />
+   </div>
+
+   <div class="form-group">
+     <label for="alterEgo"><h4>Phone-Number</h4></label>
+     <input type="text" pattern="[1-9]{1}[0-9]{9}" class="form-control" id="phonenumber" 
+     [(ngModel)]="user.phonenumber" formControlName="phonenumberform" required />
+   </div>
+
+   <button type="submit" class="mat-raised-button mat-primary"  (click)="addUsers()" [disabled]="!registrationform.valid">Submit</button>
+   <button type="submit" class="mat-raised-button mat-primary" routerLink="/auth/login">Cancel</button>
+
+ </form>
+</div>
+<router-outlet></router-outlet> 

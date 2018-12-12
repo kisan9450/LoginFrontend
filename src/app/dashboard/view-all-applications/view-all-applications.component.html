@@ -1,0 +1,19 @@
+<h4>APPLICATIONS LIST</h4>
+<div *ngIf="applicationsList ; else elseBlock" >
+  <div class="container" fxLayout="row" fxLayoutGap="1%" FxLayoutWrap fxLayoutAlign="center">
+    <div fxFlex="48%" fxFlex.xs="98%" fclass="card-block" *ngFor="let application of applicationsList">
+      <div>
+          <!-- (Event)="recieveEvent($event)" -->
+        <app-application-card [application]="application">
+        </app-application-card>
+     </div>
+    </div>
+  </div>
+  <div class=content>
+      <mat-card-content>
+         <button mat-fab color="primary" (click)="openDialog()"><strong>+</strong></button></mat-card-content>
+      </div>
+</div>
+<ng-template #elseBlock>
+  <p>No applications available</p>
+</ng-template>
